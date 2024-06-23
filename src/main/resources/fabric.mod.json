@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "autotoolswitcher",
+  "version": "${version}",
+
+  "name": "Auto Tool Switcher",
+  "description": "Automatically switches to the best tool you have for mining blocks.",
+  "authors": [
+    "Sandwitchery"
+  ],
+  "contact": {
+  },
+
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "stationapi:event_bus": [
+    ],
+    "stationapi:event_bus_client": [
+      "net.sandwitchery.autotoolswitcher.Main"
+    ],
+    "stationapi:event_bus_server": [
+    ]
+  },
+  "mixins": [
+    "autotoolswitcher.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3"
+  }
+}
